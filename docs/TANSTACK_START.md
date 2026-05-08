@@ -1,6 +1,7 @@
 # TanStack Start
 
-`mcp-handler` includes a TanStack Start adapter at `mcp-handler/tanstack`.
+`@bensenescu/mcp-handler` includes a TanStack Start adapter at
+`@bensenescu/mcp-handler/tanstack`.
 
 The adapter returns handlers in the shape TanStack Start expects for
 `server.handlers`: each method receives `{ request }` and returns a Web
@@ -14,7 +15,7 @@ streamable HTTP, SSE, and SSE message endpoints.
 ```ts
 // src/routes/api/mcp/$.ts
 import { createFileRoute } from "@tanstack/react-router";
-import { createMcpHandler } from "mcp-handler/tanstack";
+import { createMcpHandler } from "@bensenescu/mcp-handler/tanstack";
 import { z } from "zod";
 
 const mcpHandlers = createMcpHandler(
@@ -70,16 +71,13 @@ pnpm build
 pnpm pack
 ```
 
-`pnpm pack` prints a tarball name like:
+`pnpm pack` prints the tarball filename to install in your app.
 
-```text
-mcp-handler-1.1.0.tgz
-```
-
-In your TanStack Start project, install that tarball by absolute path:
+In your TanStack Start project, install that tarball by absolute path, replacing
+the filename with the one printed by `pnpm pack`:
 
 ```bash
-pnpm add /Users/bensenescu/.codex/worktrees/b982/mcp-handler/mcp-handler-1.1.0.tgz
+pnpm add /absolute/path/to/package.tgz
 pnpm add @modelcontextprotocol/sdk@1.26.0 zod
 ```
 
@@ -96,5 +94,5 @@ You can also point any Streamable HTTP MCP client at:
 http://localhost:3000/api/mcp/mcp
 ```
 
-If you change `mcp-handler`, run `pnpm build && pnpm pack` again in this
-checkout, then reinstall the new tarball in the TanStack project.
+If you change `@bensenescu/mcp-handler`, run `pnpm build && pnpm pack` again
+in this checkout, then reinstall the new tarball in the TanStack project.

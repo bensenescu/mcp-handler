@@ -336,10 +336,12 @@ describe("e2e", () => {
       }
     );
     verifyTokenMock.mockImplementation(() => {
-      throw new Error('JWT signature failed, or something')
-    })
+      throw new Error("JWT signature failed, or something");
+    });
 
-    expect(() => authenticatedClient.connect(authenticatedTransport)).rejects.toThrow('Invalid token')
+    await expect(
+      authenticatedClient.connect(authenticatedTransport)
+    ).rejects.toThrow("Invalid token");
   });
 });
 
