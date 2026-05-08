@@ -60,39 +60,3 @@ The same splat route also covers:
 http://localhost:3000/api/mcp/sse
 http://localhost:3000/api/mcp/message
 ```
-
-## Test this package locally in another project
-
-From this package checkout, build and pack the package:
-
-```bash
-pnpm install
-pnpm build
-pnpm pack
-```
-
-`pnpm pack` prints the tarball filename to install in your app.
-
-In your TanStack Start project, install that tarball by absolute path, replacing
-the filename with the one printed by `pnpm pack`:
-
-```bash
-pnpm add /absolute/path/to/package.tgz
-pnpm add @modelcontextprotocol/sdk@1.26.0 zod
-```
-
-Then add the route shown above, start your TanStack app, and test the MCP
-endpoint with an MCP client. For example, if your app runs on port `3000`:
-
-```bash
-npx -y mcp-remote http://localhost:3000/api/mcp/mcp
-```
-
-You can also point any Streamable HTTP MCP client at:
-
-```text
-http://localhost:3000/api/mcp/mcp
-```
-
-If you change `@bensenescu/mcp-handler`, run `pnpm build && pnpm pack` again
-in this checkout, then reinstall the new tarball in the TanStack project.
