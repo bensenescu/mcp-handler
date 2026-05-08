@@ -7,7 +7,7 @@ import chalk from "chalk";
 
 const program = new Command();
 
-const ROUTE_TEMPLATE = `import { createMcpHandler } from '@bensenescu/mcp-handler';
+const ROUTE_TEMPLATE = `import { createMcpHandler } from 'mcp-handler';
 import { z } from 'zod';
 
 const handler = createMcpHandler(
@@ -66,7 +66,7 @@ async function installDependencies(
   packageManager: "npm" | "pnpm" | "yarn" | "bun"
 ) {
   const execSync = (await import("node:child_process")).execSync;
-  const dependencies = ["@bensenescu/mcp-handler", "zod"];
+  const dependencies = ["mcp-handler", "zod"];
 
   const commands = {
     npm: `npm install ${dependencies.join(" ")}`,

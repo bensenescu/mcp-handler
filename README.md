@@ -1,11 +1,11 @@
-# @bensenescu/mcp-handler
+# mcp-handler
 
-An adapter for the Model Context Protocol (MCP), enabling real-time communication between your applications and AI models. Supports Next.js, Nuxt, and TanStack Start.
+A Vercel adapter for the Model Context Protocol (MCP), enabling real-time communication between your applications and AI models. Supports Next.js, Nuxt, and TanStack Start.
 
 ## Installation
 
 ```bash
-npm install @bensenescu/mcp-handler @modelcontextprotocol/sdk@1.26.0 zod@^3
+npm install mcp-handler @modelcontextprotocol/sdk@1.26.0 zod@^3
 ```
 
 > **Note**: Versions of `@modelcontextprotocol/sdk` prior to 1.26.0 have a security vulnerability. Use version 1.26.0 or later.
@@ -14,7 +14,7 @@ npm install @bensenescu/mcp-handler @modelcontextprotocol/sdk@1.26.0 zod@^3
 
 ```typescript
 // app/api/[transport]/route.ts
-import { createMcpHandler } from "@bensenescu/mcp-handler";
+import { createMcpHandler } from "mcp-handler";
 import { z } from "zod";
 
 const handler = createMcpHandler(

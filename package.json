@@ -1,13 +1,14 @@
 {
-  "name": "@bensenescu/mcp-handler",
+  "name": "mcp-handler",
   "version": "1.1.0",
-  "description": "MCP adapter for Next.js, Nuxt, TanStack Start, and other frameworks",
+  "description": "Vercel MCP Adapter for Next.js, Nuxt, TanStack Start, and other frameworks",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "commonjs",
   "bin": {
     "create-mcp-route": "./dist/cli/index.js",
-    "mcp-handler": "./dist/cli/index.js"
+    "mcp-handler": "./dist/cli/index.js",
+    "@vercel/mcp-adapter": "./dist/cli/index.js"
   },
   "exports": {
     ".": {
@@ -36,21 +37,18 @@
     }
   },
   "files": [
-    "dist",
-    "docs"
+    "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bensenescu/mcp-handler.git"
+    "url": "git+https://github.com/vercel/mcp-handler.git"
   },
-  "homepage": "https://github.com/bensenescu/mcp-handler#readme",
   "bugs": {
-    "url": "https://github.com/bensenescu/mcp-handler/issues"
+    "url": "https://github.com/vercel/mcp-handler/issues"
   },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "prepack": "pnpm build",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "version-packages": "changeset version",
@@ -63,7 +61,7 @@
     "next.js",
     "ai"
   ],
-  "author": "bensenescu",
+  "author": "Vercel",
   "license": "Apache-2.0",
   "dependencies": {
     "chalk": "^5.3.0",
@@ -92,6 +90,7 @@
   },
   "packageManager": "pnpm@9.4.0",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }

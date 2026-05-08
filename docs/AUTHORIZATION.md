@@ -7,7 +7,7 @@ The MCP adapter supports the [MCP Authorization Specification](https://modelcont
 ```typescript
 // app/api/[transport]/route.ts
 import type { AuthInfo } from "@modelcontextprotocol/sdk/server/auth/types.js";
-import { createMcpHandler, withMcpAuth } from "@bensenescu/mcp-handler";
+import { createMcpHandler, withMcpAuth } from "mcp-handler";
 import { z } from "zod";
 
 const handler = createMcpHandler(
@@ -76,7 +76,7 @@ Create `app/.well-known/oauth-protected-resource/route.ts`:
 import {
   protectedResourceHandler,
   metadataCorsOptionsRequestHandler,
-} from "@bensenescu/mcp-handler";
+} from "mcp-handler";
 
 const handler = protectedResourceHandler({
   authServerUrls: ["https://auth-server.com"],

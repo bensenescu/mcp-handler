@@ -6,7 +6,7 @@ For multi-tenant or dynamic MCP servers:
 
 ```typescript
 // app/dynamic/[p]/[transport]/route.ts
-import { createMcpHandler } from "@bensenescu/mcp-handler";
+import { createMcpHandler } from "mcp-handler";
 import type { NextRequest } from "next/server";
 import { z } from "zod";
 
@@ -67,7 +67,7 @@ interface Config {
 
 ```typescript
 // server/api/mcp/[transport].ts
-import { createMcpHandler } from "@bensenescu/mcp-handler";
+import { createMcpHandler } from "mcp-handler";
 import { fromWebHandler } from "h3";
 import { z } from "zod";
 

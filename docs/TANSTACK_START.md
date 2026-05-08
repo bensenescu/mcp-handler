@@ -1,7 +1,6 @@
 # TanStack Start
 
-`@bensenescu/mcp-handler` includes a TanStack Start adapter at
-`@bensenescu/mcp-handler/tanstack`.
+`mcp-handler` includes a TanStack Start adapter at `mcp-handler/tanstack`.
 
 The adapter returns handlers in the shape TanStack Start expects for
 `server.handlers`: each method receives `{ request }` and returns a Web
@@ -15,7 +14,7 @@ streamable HTTP, SSE, and SSE message endpoints.
 ```ts
 // src/routes/api/mcp/$.ts
 import { createFileRoute } from "@tanstack/react-router";
-import { createMcpHandler } from "@bensenescu/mcp-handler/tanstack";
+import { createMcpHandler } from "mcp-handler/tanstack";
 import { z } from "zod";
 
 const mcpHandlers = createMcpHandler(
