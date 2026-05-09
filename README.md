@@ -1,6 +1,6 @@
 # mcp-handler
 
-A Vercel adapter for the Model Context Protocol (MCP), enabling real-time communication between your applications and AI models. Supports Next.js and Nuxt.
+A Vercel adapter for the Model Context Protocol (MCP), enabling real-time communication between your applications and AI models. Supports Next.js, Nuxt, and TanStack Start.
 
 ## Installation
 
@@ -75,17 +75,18 @@ For stdio-only clients, use [mcp-remote](https://www.npmjs.com/package/mcp-remot
 - [Client Integration](docs/CLIENTS.md) - Claude Desktop, Cursor, Windsurf setup
 - [Authorization](docs/AUTHORIZATION.md) - OAuth and token verification
 - [Advanced Usage](docs/ADVANCED.md) - Dynamic routing, Nuxt, configuration options
+- [TanStack Start](docs/TANSTACK_START.md) - TanStack Start route setup
 
 ## Features
 
-- **Framework Support**: Next.js and Nuxt
+- **Framework Support**: Next.js, Nuxt, and TanStack Start
 - **Multiple Transports**: Streamable HTTP and Server-Sent Events (SSE)
 - **Redis Integration**: Optional, for SSE transport resumability
 - **TypeScript Support**: Full type definitions included
 
 ## Requirements
 
-- Next.js 13+ or Nuxt 3+
+- Next.js 13+, Nuxt 3+, or TanStack Start
 - Node.js 18+
 - Redis (optional, for SSE)
 

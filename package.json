@@ -1,7 +1,7 @@
 {
   "name": "mcp-handler",
   "version": "1.1.0",
-  "description": "Vercel MCP Adapter for Next.js and other frameworks",
+  "description": "Vercel MCP Adapter for Next.js, Nuxt, TanStack Start, and other frameworks",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "commonjs",
@@ -26,6 +26,14 @@
       },
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
+    },
+    "./tanstack": {
+      "types": {
+        "import": "./dist/tanstack/index.d.mts",
+        "require": "./dist/tanstack/index.d.ts"
+      },
+      "import": "./dist/tanstack/index.mjs",
+      "require": "./dist/tanstack/index.js"
     }
   },
   "files": [
