@@ -2,7 +2,7 @@ import { AuthInfo } from "@modelcontextprotocol/sdk/server/auth/types";
 import {
   createMcpHandler,
   withMcpAuth,
-} from "mcp-handler";
+} from "@bensenescu/mcp-handler";
 import { z } from "zod";
 
 // Define the handler with proper parameter validation

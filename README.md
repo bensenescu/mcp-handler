@@ -1,11 +1,11 @@
-# mcp-handler
+# @bensenescu/mcp-handler
 
-A Vercel adapter for the Model Context Protocol (MCP), enabling real-time communication between your applications and AI models. Supports Next.js and Nuxt.
+An adapter for the Model Context Protocol (MCP), enabling real-time communication between your applications and AI models. Supports Next.js, Nuxt, and TanStack Start.
 
 ## Installation
 
 ```bash
-npm install mcp-handler @modelcontextprotocol/sdk@1.26.0 zod@^3
+npm install @bensenescu/mcp-handler @modelcontextprotocol/sdk@1.26.0 zod@^3
 ```
 
 > **Note**: Versions of `@modelcontextprotocol/sdk` prior to 1.26.0 have a security vulnerability. Use version 1.26.0 or later.
@@ -14,7 +14,7 @@ npm install mcp-handler @modelcontextprotocol/sdk@1.26.0 zod@^3
 
 ```typescript
 // app/api/[transport]/route.ts
-import { createMcpHandler } from "mcp-handler";
+import { createMcpHandler } from "@bensenescu/mcp-handler";
 import { z } from "zod";
 
 const handler = createMcpHandler(
@@ -75,17 +75,18 @@ For stdio-only clients, use [mcp-remote](https://www.npmjs.com/package/mcp-remot
 - [Client Integration](docs/CLIENTS.md) - Claude Desktop, Cursor, Windsurf setup
 - [Authorization](docs/AUTHORIZATION.md) - OAuth and token verification
 - [Advanced Usage](docs/ADVANCED.md) - Dynamic routing, Nuxt, configuration options
+- [TanStack Start](docs/TANSTACK_START.md) - TanStack Start route setup
 
 ## Features
 
-- **Framework Support**: Next.js and Nuxt
+- **Framework Support**: Next.js, Nuxt, and TanStack Start
 - **Multiple Transports**: Streamable HTTP and Server-Sent Events (SSE)
 - **Redis Integration**: Optional, for SSE transport resumability
 - **TypeScript Support**: Full type definitions included
 
 ## Requirements
 
-- Next.js 13+ or Nuxt 3+
+- Next.js 13+, Nuxt 3+, or TanStack Start
 - Node.js 18+
 - Redis (optional, for SSE)
 
